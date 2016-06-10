@@ -1,0 +1,15 @@
+Linux:
+
+swig -c++ -python MathFuncs.i
+g++ -fPIC -c MathFuncsDll.cpp
+g++ -c MathFuncs_wrap.cxx -I/usr/include/python2.7_d
+g++ -shared MathFuncsDll.o MathFuncs_wrap.o -o _MathFuncsDll.so
+
+
+
+Windows:
+
+swig -c++ -python MathFuncsDll.i 
+g++ -fPIC -c MathFuncsDll.cpp 
+g++ -c MathFuncsDll_wrap.cxx -IC:\Python27\include 
+g++ MathFuncsDll.o MathFuncsDll_wrap.o -Ic:\python27\include -Lc:\python27\libs -lpython27 -shared -o _MathFuncsDll.pyd

@@ -1,0 +1,11 @@
+import sys
+import MathFuncsDll
+print"\nEnter :\
+\n<ProgramName> <FileName A> <Operation> <FileName B> <ResultFileName> [-b] \n\
+ Posible operations: \n\
+\"+\" - addition\n\
+\"-\" - subtraction\n\
+\"*\" - multiplication\n\
+\"/\" - division\n\
+\"%\" - taking the remainder\n\
+\"^\" - power by module\n"
